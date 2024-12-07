@@ -1,0 +1,73 @@
+{
+  "name": "TSS Helper Beta",
+  "description": "New in version 1.4.3: Supports Crocs.co.uk and UGG.com image downloads",
+  "version": "1.4.3",
+  "manifest_version": 3,
+  "icons": {
+    "16": "logo-16px.png",
+    "32": "logo-32px.png",
+    "48": "logo-48px.png",
+    "128": "logo-128px.png"
+  },
+  "action": {
+    "default_popup": "tss.html"
+  },
+  "permissions": ["tabs", "activeTab", "downloads", "sidePanel", "storage"],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "css": ["style.css"],
+      "matches": [
+        "https://*.thesolesupplier.co.uk/*",
+        "https://*.nike.com/*",
+        "https://*.office.co.uk/*",
+        "https://*.adidas.co.uk/*",
+        "https://*.adidas.com.au/*",
+        "https://*.adidas.com/*",
+        "https://*.asos.com/*",
+        "https://*.offspring.co.uk/*",
+        "https://*.office.co.uk/*",
+        "https://*.footlocker.co.uk/*",
+        "https://*.newbalance.co.uk/*",
+        "https://*.jdsports.co.uk/*",
+        "https://*.footpatrol.com/*",
+        "https://*.size.co.uk/*",
+        "https://*.sevenstore.com/*",
+        "https://*.sneakersnstuff.com/*",
+        "https://*.footasylum.com/*",
+        "https://*.converse.com/*",
+        "https://*.asics.com/*",
+        "https://*.sneakerbardetroit.com/*",
+        "https://*.fullress.com/*",
+        "https://*.sneakernews.com/*",
+        "https://*.endclothing.com/*",
+        "https://*.complex.com/*",
+        "https://*.kicksfinder.com/*",
+        "https://*.hypebeast.com/*",
+        "https://*.thehipstore.co.uk/*",
+        "https://*.mrporter.com/*",
+        "https://*.schuh.co.uk/*",
+        "https://*.nakedcph.com/*",
+        "https://*.uniqlo.com/*",
+        "https://*.footdistrict.com/*",
+        "https://*.doverstreetmarket.com/*",
+        "https://*.afew-store.com/*",
+        "https://*.nicekicks.com/*",
+        "https://*.soleretriever.com/*",
+        "https://*.prodirectsport.com/*",
+        "https://*.justfreshkicks.com/*",
+        "https://*.sneakermarket.ro/*",
+        "https://*.sportsdirect.com/*",
+        "https://*.flannels.com/*",
+        "https://*.salomon.com/*", 
+        "https://*.crocs.co.uk/*", 
+        "https://*.ugg.com/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": { "service_worker": "scripts/background.js" }
+}
